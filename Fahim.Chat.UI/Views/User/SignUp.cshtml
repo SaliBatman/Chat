@@ -1,0 +1,75 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="colorlib.com">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="~/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="~/css/signup.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <form method="POST" id="signup-form" class="signup-form" action="@(Url.Action("Signup"))" >
+                <div>
+                    <h3></h3>
+                    <fieldset>
+                        <input type="text" name="Firstname" id="first_name" />
+                        <label for="first_name" class="form-label">01 . What is your first name ?</label>
+                    </fieldset>
+
+                    <h3></h3>
+                    <fieldset>
+                        <input type="text" name="Lastname" id="last_name" />
+                        <label for="last_name" class="form-label">02 . What is your last name ?</label>
+                    </fieldset>
+
+                    <h3></h3>
+                    <fieldset>
+                        <input type="email" name="Email" id="email" />
+                        <label for="email" class="form-label">03 . What is your Email ?</label>
+                    </fieldset>
+                    <h3></h3>
+
+                    <fieldset>
+                        <input type="number" name="PhoneNumber" id="phone_number" />
+                        <label for="PhoneNumber" class="form-label">04 Phone Number </label>
+                    </fieldset>
+                    <h3></h3>
+                    <fieldset>
+                        <input type="text" name="Password" id="password" />
+                        <label for="password" class="form-label">05 . Create your password</label>
+                        <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                    </fieldset>
+
+                    <h3></h3>
+                    <fieldset>
+                        <input type="text" name="re_password" id="re_password" />
+                        <label for="re_password" class="form-label">06 . Repeat your password </label>
+                        <span toggle="#re_password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="~/lib/jquery-steps/jquery.steps.js"></script>
+    <script src="~/js/signup.js"></script>
+</body>
+</html>
